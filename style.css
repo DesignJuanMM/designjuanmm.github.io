@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+.gris {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #28292d;
+}
+.gris2 {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.gris3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #28292d;
+}
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.box::before {
+  content: "";
+  top: -50%;
+  left: -50%;
+  position: absolute;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, #45f3ff, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: cuadro 6s linear infinite;
+}
+.box::after {
+  content: "";
+  top: -50%;
+  left: -50%;
+  position: absolute;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, #45f3ff, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: cuadro 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes cuadro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+}
+.corazon {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  transform: rotate(45deg);
+  margin: 150px auto;
+  position: relative;
+  border: 10px;
+  border-color: rgb(132, 0, 255);
+  border-radius: 5px;
+  animation: palpitar 2s linear infinite alternate;
+  will-change: transform;
+}
+
+.corazon:before,
+.corazon:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: red;
+  border: 10px;
+  border-color: rgb(132, 0, 255);
+  border-radius: 50%;
+}
+
+.corazon:before {
+  top: 0;
+  left: -50%;
+}
+
+.corazon:after {
+  top: -50%;
+  left: 0;
+}
+
+.sombra {
+  width: 130px;
+  height: 130px;
+  background-color: rgb(1, 1, 1);
+  margin: 150px auto;
+  position: relative;
+  border-radius: 5px;
+  animation: palpita 2s linear infinite alternate;
+  will-change: transform;
+  box-shadow: 0 0px 40px;
+  z-index: -3;
+}
+
+.sombra:before,
+.sombra:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(1, 1, 1);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0px 40px;
+  z-index: -3;
+}
+
+.sombra:before {
+  top: 0;
+  left: -50%;
+  z-index: -3;
+}
+
+.sombra:after {
+  top: -50%;
+  left: 0;
+  z-index: -3;
+}
+
+@keyframes palpita {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+@keyframes palpitar {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@import url('link href="https://fonts.googleapis.com/css2?family=poppins:wght@700&display=swap');
+.content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+.content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+h2 {
+  position: relative;
+  font-size: 4vw;
+  color: #28292d;
+}
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #dc01a9;
+  -webkit-text-stroke: 0vw #000000;
+  border-right: 2px solid #dc01a9;
+  overflow: hidden;
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.curse {
+  display: inline-block;
+  color: #f2f2f2;
+}
+h1 {
+  font-family: monospace;
+  padding: 5px;
+  margin: 5px;
+  border-right: 2.5px solid green;
+  animation: cursor 2s infinite, curse 9.5s steps(34) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: green;
+  }
+}
+@keyframes curse {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
