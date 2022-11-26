@@ -4,14 +4,21 @@
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
 }
+body{
+  background: #28292d;
+}
 .gris {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #28292d;
 }
 .gris2 {
+  display: ;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -20,13 +27,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 10px;
   background-color: #28292d;
 }
+
 .box {
   position: relative;
-  width: 380px;
-  height: 420px;
+  width: 180px;
+  height: 180px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -35,8 +43,8 @@
   top: -50%;
   left: -50%;
   position: absolute;
-  width: 380px;
-  height: 420px;
+  width: 180px;
+  height: 180px;
   background: linear-gradient(0deg, #45f3ff, #45f3ff, #45f3ff);
   transform-origin: bottom right;
   animation: cuadro 6s linear infinite;
@@ -46,8 +54,8 @@
   top: -50%;
   left: -50%;
   position: absolute;
-  width: 380px;
-  height: 420px;
+  width: 180px;
+  height: 180px;
   background: linear-gradient(0deg, #45f3ff, #45f3ff, #45f3ff);
   transform-origin: bottom right;
   animation: cuadro 6s linear infinite;
@@ -69,11 +77,11 @@
   z-index: 10;
 }
 .corazon {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   background-color: red;
   transform: rotate(45deg);
-  margin: 150px auto;
+  margin: 50px auto;
   position: relative;
   border: 10px;
   border-color: rgb(132, 0, 255);
@@ -106,10 +114,10 @@
 }
 
 .sombra {
-  width: 130px;
-  height: 130px;
+  width: 70px;
+  height: 70px;
   background-color: rgb(1, 1, 1);
-  margin: 150px auto;
+  margin: 50px auto;
   position: relative;
   border-radius: 5px;
   animation: palpita 2s linear infinite alternate;
@@ -167,18 +175,6 @@
 }
 
 @import url('link href="https://fonts.googleapis.com/css2?family=poppins:wght@700&display=swap');
-.content1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10vh;
-}
-.content2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10vh;
-}
 h2 {
   position: relative;
   font-size: 4vw;
@@ -242,4 +238,108 @@ h1 {
   to {
     width: 100%;
   }
+}
+
+.gris4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background-color: #28292d;
+}
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .ring {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: -30px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #45f3ff;
+  animation: cargando 4s linear infinite;
+}
+@keyframes cargando {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cargando1 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.container .ring::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #45f3ff;
+  box-shadow: 0 0 0 5px #24ecff33, 0 0 0 10px #24ecff22, 0 0 20px #24ecff11,
+    0 0 20px #24ecff,
+    0 0 50px #24ecff;
+}
+.container .ring:nth-child(2) {
+  animation: cargando1 4s linear infinite;
+  animation-delay: -1s;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #93ff2d;
+}
+.container .ring:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: initial;
+  bottom: 12px;
+  left: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #93ff2d;
+  box-shadow: 0 0 0 5px #93ff2d33, 0 0 0 10px #93ff2d22, 0 0 0 20px #93ff2d11,
+    0 0 20px #93ff2d,
+    0 0 50px #93ff2d;
+}
+.container .ring:nth-child(3) {
+  animation: cargando1 4s linear infinite;
+  animation-delay: -3s;
+  position: absolute;
+  top: -66.66px;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #dc01a9;
+}
+
+.container .ring:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: initial;
+  bottom: 12px;
+  left: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #dc01a9;
+  box-shadow: 0 0 0 5px #dc01a933, 0 0 0 10px #93ff2d22, 0 0 0 20px #dc01a911,
+    0 0 20px #dc01a9,
+    0 0 50px #dc01a9;
+}
+.container p {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: consolas;
+  letter-spacing: 0.15em;
 }
