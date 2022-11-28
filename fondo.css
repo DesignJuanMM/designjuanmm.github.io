@@ -5,6 +5,7 @@
 }
 body {
   font-family: "roboto", "sans serif";
+  display: flex;
 }
 .contenedor {
   width: 90%;
@@ -107,6 +108,14 @@ body {
   align-items: center;
   height: 100%;
 }
+.banner2 {
+  min-height: 600px;
+    padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
 .banner_title h2 {
   color: #fff;
   font-size: 60px;
@@ -198,8 +207,6 @@ body {
 }
 
 ul {
-
-  padding-top: 10%;
   position: relative;
   display: flex;
 }
@@ -349,4 +356,111 @@ ul li:hover a::before {
   100% {
     transform: translatey(0x);
   }
+}
+
+/* formulario de contacto */
+.main {
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  background-image: linear-gradient(
+    to left,
+    rgba(66, 66, 66, 0.67),
+    rgba(45, 62, 246, 0.233)
+  );
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 0.6em;
+
+  animation: mostrar 1.5s ease-in-out;
+}
+
+@keyframes mostrar {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.main__figure {
+  overflow: hidden;
+  border-radius: 1em;
+  background-color: #ffffff;
+  display: flex;
+}
+
+.main__img {
+  margin: auto;
+  width: 80%;
+  max-width: 60vw;
+}
+
+.main__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 3em 0.7em;
+  text-align: center;
+}
+
+.main__form {
+  display: grid;
+  justify-items: center;
+  gap: 1.5em;
+}
+
+.main__input {
+  width: 80%;
+  max-width: 500px;
+  outline: none;
+  border: none;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0.6em;
+}
+
+.main__input--send {
+  background-color: #dc3f31;
+  color: #fff;
+  font-weight: 600;
+}
+
+.main__title {
+  font-size: 2.3rem;
+  color: #fff;
+}
+
+.main__paragraph {
+  color: #fff;
+  margin: 0.3em 0;
+}
+
+.main__link {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 0.6em 1.5em;
+}
+
+.main__link:hover {
+  background-color: #fff;
+}
+
+.main__icon {
+  width: 30px;
+  height: 30px;
+}
+.redes {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }

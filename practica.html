@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practica banner animado css</title>
+    <link rel="stylesheet" href="practica.css" type="text/css" />
+    <link rel="stylesheet" href="banner.css" type="text/css" />
+    <link rel="stylesheet" href="graphic.css" type="text/css" />
+  </head>
+  <body>
+    <section class="main-banner">
+      <!--grid container-->
+      <div class="grid-container">
+        <!--banner-container-->
+        <div class="content">
+          <!--titulo-->
+          <div>
+            <h1 class="title s-center">
+              <span class="line1">Tecnología Prueba</span>
+              <br>
+              <span class="line2">con CSS</span>
+            </h1>
+          </div>
+          <!--descripción-->
+          <span class="descripcion s-center">adasdasdasdasdasdsa</p>
+          <!--countdown-->
+          <div class="countdown flex">
+            <span>Empieza En:</span>
+            <div class="flex">
+              <div class="countdown-item flex">
+                <span class="countdown-number">03</span>
+                <span class="countdown-letter">D</span>
+              </div>              
+              <div class="countdown-item flex">
+                <span class="countdown-number">11</span>
+                <span class="countdown-letter">H</span>
+              </div>
+              <div class="countdown-item flex">
+                <span class="countdown-number">48</span>
+                <span class="countdown-letter">M</span>
+              </div>
+              <div class="countdown-item flex">
+                <span class="countdown-number">19</span>
+                <span class="countdown-letter">S</span>
+              </div>
+            </div>
+          </div>
+          <!--seccion de formulario-->
+          <div class="form-container s-center">
+            <form action="" class="form">
+              <input type="email" name="email" class="input" required placeholder="ingresa tu correo electronico">
+              <button type="submit" class="button">Registrate</button>
+            </form>
+            <!--mensaje-->
+            <p class="form-hint s-center">Deja tu correo y se el primero en acceder a los descuentos</p>
+          </div>
+        </div>
+        <!--grafico-->
+        <div class="graphic">
+          <img class="graphic-man" src="css.png" alt="" >
+          <img class="graphic-go absolute" src="discord.png" alt="" >
+          <div class="graphic-circles absolute">
+            <img class="graphic-circle-1" src="html-5.png" alt="" >
+            <img  class="graphic-circle-2" src="html.png" alt="">
+            <img class="graphic-energy" src="node-js.png" alt="" >
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
