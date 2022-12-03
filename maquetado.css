@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  outline: 2px solid #000;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows: repeat(6,1fr);
+  gap: 1px;
+  grid-template-areas: "menu menu"
+                       "titulo logo"
+                       "titulo logo"
+                       "contacto logo"
+                       "redes logo"
+                       "footer footer";
+}
+.element {
+  font-size: 2rem;
+  color: cornflowerblue;
+  font-family: sans-serif;
+  text-align: center;
+  background-size: cover;
+  background-position: center bottom;
+}
+.element1 {
+  background-color: crimson;
+  background-image: var(--image1);
+  grid-area: menu;
+}
+.element2 {
+  background-color: darkgreen;
+  background-image: var(--image2);
+  grid-area: titulo;
+}
+.element3 {
+  background-color: coral;
+  background-image: var(--image3);
+  grid-area: logo;
+}
+.element4 {
+  background-color: darkslateblue;
+  background-image: var(--image4);
+  grid-area: contacto;
+}
+.element5 {
+  background-color:darkseagreen ;
+  background-image: var(--image5);
+  grid-area: redes;
+}
+.element6 {
+  background-color:black ;
+  background-image: var(--image6);
+  grid-area: footer;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas:
+    "menu menu menu"
+    "logo titulo titulo"
+    "contacto contacto contacto"
+    "redes redes redes"
+    "footer footer footer";
+  }
+}
