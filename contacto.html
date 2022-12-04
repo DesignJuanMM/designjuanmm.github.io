@@ -1,99 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario</title>
-    <link rel="stylesheet" href="fondo.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>CONTACTANOS</title>
+    <link rel="stylesheet" href="css/maquetado.css" />
     <script
       src="https://kit.fontawesome.com/e5761c38df.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <header class="bg_animate">
-      <div class="header_nav">
-        <div class="contenedor">
-          <h1>DesignJuanM</h1>
-          <nav>
-            <a href="fondo.html" class="btn-menu">
-              <span id="span2"></span>
-              <span id="span3"></span>
-              <span id="span4"></span>
-              Inicio
+    <div class="s100">
+      <section class="formulario">
+        <header class="element1 element">
+          <div class="menus1">
+            <a href="index.html" style="text-decoration: none"
+              ><h1>DesignJuanM</h1>
             </a>
-            <!-- <a href="servicios.html" class="btn-menu">
-              <span id="span2"></span>
-              <span id="span3"></span>
-              <span id="span4"></span>
-              Servicios
-            </a> -->
-            <a href="contacto.html" class="btn-menu">
-              <span id="span2"></span>
-              <span id="span3"></span>
-              <span id="span4"></span>
-              Contacto
-            </a>
-          </nav>
-        </div>
-      </div>
-
-      <div class="banner2">
-        <div class="main">
-          <figure class="main__figure">
-            <img src="./img/illustration.svg" class="main__img" />
-          </figure>
-
-          <div class="main__contact">
-            <h2 class="main__title">Formulario De Contacto</h2>
-            <p class="main__paragraph">
-              Por favor llenar el formulario con su duda
-            </p>
-
-            <form class="main__form" action="#">
-              <input type="text" placeholder="Nombre" class="main__input" />
-
-              <input type="email" placeholder="Email" class="main__input" />
-
-              <textarea
-                name="mensaje"
-                placeholder="Mensaje"
-                class="main__input"
-              ></textarea>
-              <input
-                type="submit"
-                value="Enviar"
-                class="main__input main__input--send"
-              />
-            </form>
-            <h2 class="redes">Redes Sociales</h2>
-            <ul>
-              <li>
-                <a href="https://www.instagram.com/designjuanm/"
-                  ><i class="fa-brands fa-instagram instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://wa.me/584247438141"
-                  ><i class="fa-brands fa-whatsapp whatsapp"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/DesignJuanM"
-                  ><i class="fa-brands fa-twitter twitter"></i
-                ></a>
-              </li>
-            </ul>
+            <nav>
+              <a href="index.html" class="menu">
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                Inicio
+              </a>
+              <!-- <a href="servicios.html" class="menu">
+      <span id="span2"></span>
+      <span id="span3"></span>
+      <span id="span4"></span>
+      Servicios
+    </a> -->
+              <a href="contacto.html" class="menu"
+                ><span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                Contacto
+              </a>
+            </nav>
+          </div>
+        </header>
+        <div class="element7 element">
+          <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+              <h1 class="logo">Formulario de <span>Contacto</span></h1>
+              <form action="">
+                <p>
+                  <label>Nombre</label>
+                  <input type="text" name="fullname" placeholder="Nombre" />
+                </p>
+                <p>
+                  <label>Correo Electronico</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="ejemplo@ejemplo.com"
+                  />
+                </p>
+                <p>
+                  <label>Telefono</label>
+                  <input type="tel" name="phone" placeholder="+58 1234567" />
+                </p>
+                <p>
+                  <label>Asunto</label>
+                  <input type="text" name="asunto" placeholder="Asunto" />
+                </p>
+                <p class="block">
+                  <label>Mensaje</label>
+                  <textarea
+                    name="message"
+                    rows="3"
+                    placeholder="Mensaje"
+                  ></textarea>
+                </p>
+                <p class="block boton">
+                  <button class="btn-neon">
+                    <!-- <span id="span1"></span> -->
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
+                    Enviar
+                  </button>
+                </p>
+              </form>
+            </div>
+            <div class="contact-info">
+              <h4>METODOS DE PAGO</h4>
+              <p>
+                Recibimos distintos medios de pago.
+              </p>
+              <p>Company.com</p>
+              <p>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/designjuanm/ "
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fa-brands fa-instagram instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/584247438141"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fa-brands fa-whatsapp whatsapp"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/DesignJuanM"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fa-brands fa-twitter twitter"></i
+                    ></a>
+                  </li>
+                </ul>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+        <div class="element6 element">@DesignJuanM 2022 - 2023</div>
+      </section>
+    </div>
   </body>
 </html>
