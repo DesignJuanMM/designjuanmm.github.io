@@ -338,7 +338,35 @@ ul li:hover a::before {
     grid-area: titulo;
     align-content: center;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 800;
+  }
+  .banner_img img {
+    width: 100px;
+  }
+  .boton .btn-neon {
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  ul li a .fa-brands {
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+  }
+  ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
   }
 }
