@@ -330,8 +330,15 @@ ul li:hover a::before {
     grid-template-areas:
       "menu menu menu"
       "logo titulo titulo"
-      "contacto contacto contacto"
+      "logo contacto contacto"
       "redes redes redes"
       "footer footer footer";
+  }
+  .element2 {
+    grid-area: titulo;
+    align-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
   }
 }
