@@ -8,7 +8,8 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(35deg, #004045, #000000, #001d0b, #000000);
+  /* background: linear-gradient(35deg, #004045, #000000, #001d0b, #000000); */
+  background: #181818;
   color: #fff;
   font-family: "roboto" sans-serif;
 }
@@ -35,16 +36,15 @@ body {
   height: 100vh;
   margin: auto;
   display: grid;
+  gap: 1px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 1px;
   grid-template-areas:
     "menu menu menu"
     "titulo titulo logo"
     "titulo titulo logo"
     "contacto contacto logo"
     "redes redes logo"
-    "formulario formulario formulario"
     "footer footer footer";
 }
 .element {
@@ -355,11 +355,11 @@ body {
     overflow: hidden;
     transition: 0.2s;
   }
- .element5 ul li a .fa-brands {
+  .element5 ul li a .fa-brands {
     font-size: 4em;
     color: rgb(255, 255, 255);
   }
- .element5 ul li a::before {
+  .element5 ul li a::before {
     font-family: "FontAwesome";
     position: absolute;
     top: 0;
@@ -393,137 +393,121 @@ body {
   padding: 1.5em;
   grid-area: formulario;
 }
-.logo {
-  text-align: center;
-  font-size: 3em;
-}
-.logo span {
-  color: #b70e21;
-}
-/* sombra */
-.contact-wrapper {
-  box-shadow: 0 0 20px 0 rgba(0, 255, 110, 0.3);
-}
-.contact-wrapper > * {
-  padding: 1em;
-}
-/* color formulario */
-.contact-form {
+
+.from {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
   background-image: linear-gradient(
     to left,
-    rgba(41, 41, 41, 0.67),
-    rgba(4, 5, 5, 0.233)
+    rgba(66, 66, 66, 0.67),
+    rgba(45, 62, 246, 0.233)
   );
-}
-.contact-form form {
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 0.6em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "izq derecha derecha"
+    "izq derecha derecha"
+    "izq derecha derecha";
+  animation: mostrar 1.5s ease-in-out;
 }
-.contact-form form label {
-  display: block;
-  padding-left: 2%;
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
 }
-.contact-form form p {
-  margin: 0;
-  padding: 0.5em;
+@keyframes mostrar {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
-.contact-form form .block {
-  grid-column: 1 / 3;
+
+.main__figure {
+  overflow: hidden;
+  border-radius: 1em;
+  background-color: #ffffff;
+  display: flex;
+  grid-area: izq;
 }
-.contact-form form button,
-.contact-form form input,
-.contact-form form textarea {
-  width: 96%;
-  max-width: 650px;
+
+.main__img {
+  margin: auto;
+  width: 80%;
+  max-width: 60vw;
+}
+
+.main__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 3em 0.7em;
+  text-align: center;
+  grid-area: derecha;
+}
+
+.main__form {
+  display: grid;
+  justify-items: center;
+  gap: 1.5em;
+}
+
+.main__input {
+  width: 80%;
+  max-width: 500px;
   outline: none;
   border: none;
   padding: 1em;
   font: inherit;
   border-radius: 0.6em;
 }
-.contact-form form button {
-  background: transparent;
-  border: 0;
-  text-transform: uppercase;
-  padding: 1em;
+
+.main__input--send {
+  background-color: #dc3f31;
+  color: #fff;
+  font-weight: 600;
 }
-/* CONTACT INFO */
-.contact-info {
-  background-image: linear-gradient(
-    to left,
-    transparent,
-    rgba(10, 167, 167, 0.233)
-  );
+
+.main__title {
+  font-size: 2.3rem;
+  color: #fff;
 }
-.contact-info h4,
-.contact-info p {
-  text-align: center;
-  margin: 0 0 1rem 0;
+
+.main__paragraph {
+  color: #fff;
+  margin: 0.3em 0;
 }
-.contact-info ul {
-  position: relative;
-  display: flex;
+
+.main__link {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 0.6em 1.5em;
 }
-.contact-info ul li {
-  position: relative;
-  list-style: none;
-  margin: 0 20px;
-  cursor: pointer;
+
+.main__link:hover {
+  background-color: #fff;
 }
-.contact-info ul li a {
-  text-decoration: none;
+
+.main__icon {
+  width: 30px;
+  height: 30px;
 }
-.contact-info ul li a .fa-brands {
-  font-size: 4em;
-  color: rgb(255, 255, 255);
-}
-.contact-info ul li a::before {
-  font-family: "FontAwesome";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 4em;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
-}
-.contact-info ul li:nth-child(1) a::before {
-  content: "\f16d";
-  background-image: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-bottom: 4px solid #dc2743;
-}
-.contact-info ul li:nth-child(2) a::before {
-  content: "\f232";
-  color: #25d366;
-  border-bottom: 4px solid #25d366;
-}
-.contact-info ul li:nth-child(3) a::before {
-  content: "\f099";
-  color: #1da1f2;
-  border-bottom: 4px solid #1da1f2;
-}
-.contact-info ul li:hover a::before {
-  height: 100%;
-}
-@media (min-width: 700px) {
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .contact-wrapper > * {
-    padding: 2em;
-  }
-  .contact-info h4,
-  .contact-info p {
-    text-align: left;
+@media screen and (max-width: 768px) {
+  .from {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+      "izq"
+      "derecha";
+    animation: mostrar 1.5s ease-in-out;
   }
 }

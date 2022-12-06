@@ -13,25 +13,7 @@ body {
   height: 100vh;
   position: relative;
   /* overflow: hidden; */
-
 }
-/* .abajo {
-  display: flex;
-  bottom:0;
-  position: absolute;
-  margin-bottom: 10px;
-}
-.centrar {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-.centrar1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 .contenedor {
   width: 90%;
   max-height: 500px;
@@ -70,12 +52,10 @@ body {
 .contenedor .redes {
   height: 100px;
   grid-area: redes;
-
 }
 .contenedor .footer {
   background: #00000033;
   grid-area: footer;
-
 }
 
 /* menu */
@@ -286,22 +266,27 @@ ul li a::before {
 
 ul li:nth-child(1) a::before {
   content: "\f16d";
-  background-image: linear-gradient(45deg, 
-    #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
-    #bc1888 100%);
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   border-bottom: 4px solid #dc2743;
 }
 ul li:nth-child(2) a::before {
   content: "\f232";
-  color: #25D366;
-  border-bottom: 4px solid #25D366;
+  color: #25d366;
+  border-bottom: 4px solid #25d366;
 }
 ul li:nth-child(3) a::before {
   content: "\f099";
-  color: #1DA1F2;
-  border-bottom: 4px solid #1DA1F2;
+  color: #1da1f2;
+  border-bottom: 4px solid #1da1f2;
 }
 ul li:hover a::before {
   height: 100%;
@@ -438,3 +423,4 @@ ul li:hover a::before {
     opacity: 0;
   }
 }
+
